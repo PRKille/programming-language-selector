@@ -51,3 +51,49 @@ form img {
 form#form-one {
   display: block;
 }
+
+.btn-default {
+	box-shadow: 0px 14px 14px -7px #518739;
+	background:linear-gradient(to bottom, #aed69a 5%, #72b352 100%);
+	background-color:#aed69a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#1a151a;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 35px;
+	text-decoration:none;
+}
+.btn-default:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #aed69a 100%);
+	background-color:#72b352;
+}
+.btn-default:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-danger {
+	box-shadow: 0px 14px 14px -7px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #cc1a1a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:8px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.btn-danger:hover {
+	background-color:#4e0b06;
+}
+.btn-danger:active {
+	position:relative;
+	top:1px;
+}

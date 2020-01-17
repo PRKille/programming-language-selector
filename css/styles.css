@@ -31,9 +31,11 @@ body {
 }
 
 .jumbotron {
-  background-image: radial-gradient(rgb(22, 245, 41), rgb(36, 81, 228), rgb(56, 8, 102));
+	background-image: radial-gradient(rgb(22, 245, 41) 5%, rgb(36, 81, 228) 15%, rgba(54, 4, 77, 0.918) 80%);
+	box-shadow: 0 0 15px rgba(54, 4, 77, 0.918);
+	border-color: transparent;
   color: rgb(255, 24, 24);
-  border-radius: 40%;
+  border-radius: 50%;
   margin: 0% 25%;
   margin-bottom: 20px;
   text-decoration: none;

@@ -1,4 +1,32 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("../img/hypercode.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container {
+  display: flex;
+  background-image: linear-gradient(to bottom right, #501a1acc, rgb(37, 55, 133));
+  opacity: 0.9;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: aliceblue;
+  background-size: cover;
+  height: 100%;
+}
+
 .result {
   display: none;
+}
+
+.jumbotron {
+  background-image: radial-gradient(rgb(22, 245, 41), rgb(36, 81, 228), rgb(56, 8, 102));
+  color: rgb(255, 24, 24);
+
 }
 

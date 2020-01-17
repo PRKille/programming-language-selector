@@ -42,6 +42,12 @@ $(document).ready(function(){
       $(".opening").show();
       $("#form-one").show();
     }
+
+    $("button.btn-danger").click(function(){
+      $(".result").hide();
+      $(".opening").show(); 
+      $("#form-one").show();
+    });
     event.preventDefault();
   });
 });

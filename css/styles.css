@@ -41,8 +41,13 @@ body {
 
 form {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: none;
 }
 
 form img {
   height: 50px;
+}
+
+form#form-one {
+  display: block;
 }

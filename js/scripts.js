@@ -2,7 +2,6 @@ $(document).ready(function(){
   $("form#form-one").submit(function(){
     $("#form-one").hide();
     $(".opening").hide();
-    event.preventDefault();
     answerOne = $("input:radio[name=question1]:checked").val();
     console.log(answerOne);
     answerTwo = $("input:radio[name=question2]:checked").val();
@@ -27,6 +26,22 @@ $(document).ready(function(){
       } else {
         $(".javascript").show();
       }
+    } else if (answerFive === "5") {
+      $(".five-stars").show();
+      if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
+        $(".csharp").show();
+      } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
+        $(".ruby").show();
+      } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
+        $(".python").show();
+      } else {
+        $(".javascript").show();
+      }
+    } else {
+      alert("You have to rate to see your answer!")
+      $(".opening").show();
+      $("#form-one").show();
     }
+    event.preventDefault();
   });
 });

@@ -1,12 +1,4 @@
 $(document).ready(function(){
-  // $("form#form-one").submit(function(){
-  //   $("#form-one").hide();
-  //   $(".opening").hide();
-  //   answerOne = $("input:radio[name=question1]:checked").val();
-  //   answerTwo = $("input:radio[name=question2]:checked").val();
-  //   answerThree = $("input:radio[name=question3]:checked").val();
-  //   answerFour = $("input:radio[name=question4]:checked").val();
-  //   answerFive = $("input:radio[name=question5]:checked").val();
   $("form#form-one").submit(function(){ 
     event.preventDefault(); 
     $("#form-one").hide();
@@ -32,11 +24,6 @@ $(document).ready(function(){
             $("#form-five").hide();
             $(".opening").hide();
             answerFive = $("input:radio[name=question5]:checked").val();
-            console.log(answerOne);
-            console.log(answerTwo);
-            console.log(answerThree);
-            console.log(answerFour);
-            console.log(answerFive);
             if (answerFive === "1" || answerFive === "2") {
               $(".one-two-stars").fadeIn();
             } else if (answerFive === "3" || answerFive === "4") {

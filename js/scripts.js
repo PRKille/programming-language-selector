@@ -3,39 +3,34 @@ $(document).ready(function(){
     $("#form-one").hide();
     $(".opening").hide();
     answerOne = $("input:radio[name=question1]:checked").val();
-    console.log(answerOne);
     answerTwo = $("input:radio[name=question2]:checked").val();
-    console.log(answerTwo);
     answerThree = $("input:radio[name=question3]:checked").val();
-    console.log(answerThree);
     answerFour = $("input:radio[name=question4]:checked").val();
-    console.log(answerFour);
     answerFive = $("input:radio[name=question5]:checked").val();
-    console.log(answerFive);
     
     if (answerFive === "1" || answerFive === "2") {
-      $(".one-two-stars").show();
+      $(".one-two-stars").fadeIn();
     } else if (answerFive === "3" || answerFive === "4") {
-      $(".three-four-stars").show();
+      $(".three-four-stars").slideDown();
       if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
-        $(".csharp").show();
+        $(".csharp").slideDown();
       } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
-        $(".ruby").show();
+        $(".ruby").slideDown();
       } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
-        $(".python").show();
+        $(".python").slideDown();
       } else {
-        $(".javascript").show();
+        $(".javascript").slideDown();
       }
     } else if (answerFive === "5") {
-      $(".five-stars").show();
+      $(".five-stars").slideDown();
       if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
-        $(".csharp").show();
+        $(".csharp").slideDown();
       } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
-        $(".ruby").show();
+        $(".ruby").slideDown();
       } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
-        $(".python").show();
+        $(".python").slideDown();
       } else {
-        $(".javascript").show();
+        $(".javascript").slideDown();
       }
     } else {
       alert("You have to rate to see your answer!")
@@ -44,9 +39,9 @@ $(document).ready(function(){
     }
 
     $("button.btn-danger").click(function(){
-      $(".result").hide();
-      $(".opening").show(); 
-      $("#form-one").show();
+      $(".result").fadeOut();
+      $(".opening").delay(600).fadeIn(); 
+      $("#form-one").delay(600).fadeIn();
     });
     event.preventDefault();
   });

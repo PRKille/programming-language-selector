@@ -6,6 +6,11 @@ body {
   background-image: url("../img/hypercode.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  color: whitesmoke;
+  text-shadow: 3px 2px #333;
+  letter-spacing: 2px;
 }
 
 .flex-container {
@@ -22,11 +27,22 @@ body {
 
 .result {
   display: none;
+  text-decoration: underline;
 }
 
 .jumbotron {
   background-image: radial-gradient(rgb(22, 245, 41), rgb(36, 81, 228), rgb(56, 8, 102));
   color: rgb(255, 24, 24);
-
+  border-radius: 40%;
+  margin: 0% 25%;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
 
+form {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form img {
+  height: 50px;
+}

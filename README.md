@@ -6,7 +6,7 @@
 
 ## Description
 
-_This webpage asks the user to answer a series of questions. The answers are then used to return a suggested programming language that the user would be suited to learn._
+This webpage asks the user to answer a series of questions. The answers are then used to return a suggested programming language that the user would be suited to learn.
 
 ## Setup/Installation Requirements
 
@@ -14,6 +14,10 @@ _This webpage asks the user to answer a series of questions. The answers are the
 * _Navigate to the programming-language-selector folder in either your terminal or by double clicking the folder on your desktop._
 * _Next open the index.html file in any web browser you choose._
 * _Enjoy discovering the programming language for you!_
+
+## Known Bugs
+
+1. Displays first question above current question after second press of "Try again" and third submittal of first question. If continued also displays opening headers upon reaching result.
 
 ## Technologies Used
 

@@ -15,7 +15,7 @@ This webpage asks the user to answer a series of questions. The answers are then
 * _Next open the index.html file in any web browser you choose._
 * _Enjoy discovering the programming language for you!_
 
-* _You may also view the page at PRKille.github.i0/programming-language-selector_
+* _You may also view the page by [clicking here](PRKille.github.i0/programming-language-selector)._
 
 ## Known Bugs
 

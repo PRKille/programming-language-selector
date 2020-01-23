@@ -1,4 +1,37 @@
 $(document).ready(function(){
+  // Business Logic
+  function evaluate() {
+    if (answerFive === "1" || answerFive === "2") {
+      $(".one-two-stars").fadeIn();
+    } else if (answerFive === "3" || answerFive === "4") {
+      $(".three-four-stars").slideDown();
+      if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
+        $(".csharp").slideDown();
+      } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
+        $(".ruby").slideDown();
+      } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
+        $(".python").slideDown();
+      } else {
+        $(".javascript").slideDown();
+      }
+    } else if (answerFive === "5") {
+      $(".five-stars").slideDown();
+      if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
+        $(".csharp").slideDown();
+      } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
+        $(".ruby").slideDown();
+      } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
+        $(".python").slideDown();
+      } else {
+        $(".javascript").slideDown();
+      }
+    } else {
+      alert("You have to rate to see your answer!")
+      $(".opening").show();
+      $("#form-one").show();
+    };
+  };
+// User Interface Logic
   $("form#form-one").submit(function(){ 
     event.preventDefault(); 
     $("#form-one").hide();
@@ -24,42 +57,13 @@ $(document).ready(function(){
             $("#form-five").hide();
             $(".opening").hide();
             answerFive = $("input:radio[name=question5]:checked").val();
-            if (answerFive === "1" || answerFive === "2") {
-              $(".one-two-stars").fadeIn();
-            } else if (answerFive === "3" || answerFive === "4") {
-              $(".three-four-stars").slideDown();
-              if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
-                $(".csharp").slideDown();
-              } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
-                $(".ruby").slideDown();
-              } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
-                $(".python").slideDown();
-              } else {
-                $(".javascript").slideDown();
-              }
-            } else if (answerFive === "5") {
-              $(".five-stars").slideDown();
-              if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
-                $(".csharp").slideDown();
-              } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
-                $(".ruby").slideDown();
-              } else if (answerOne === "pretty" && answerTwo === "old" && answerFour === "play") {
-                $(".python").slideDown();
-              } else {
-                $(".javascript").slideDown();
-              }
-            } else {
-              alert("You have to rate to see your answer!")
-              $(".opening").show();
-              $("#form-one").show();
-            }
-
-      $("button.btn-danger").click(function(){
-        $(".result").fadeOut();
-        $(".opening").delay(600).fadeIn(); 
-        $("#form-one").delay(600).fadeIn();
-      });
-      event.preventDefault();
+            evaluate();
+            $("button.btn-danger").click(function(){
+              $(".result").fadeOut();
+              $(".opening").delay(600).fadeIn(); 
+              $("#form-one").delay(600).fadeIn();
+              });
+            event.preventDefault();
           });
         });
       });

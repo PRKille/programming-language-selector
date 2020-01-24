@@ -10,21 +10,22 @@ This webpage asks the user to answer a series of questions. The answers are then
 
 ## Setup/Installation Requirements
 
-* _First, clone this repository to your desktop by opening your terminal and entering the prompt "cd desktop" followed by pressing the enter(return) key. Then type "git clone" followed by the URL to this repository and press enter(return) again._
-* _Navigate to the programming-language-selector folder in either your terminal or by double clicking the folder on your desktop._
-* _Next open the index.html file in any web browser you choose._
-* _Enjoy discovering the programming language for you!_
-
-* _You may also view the page by [clicking here](PRKille.github.i0/programming-language-selector)._
-
-## Known Bugs
-
-1. Displays first question above current question after second press of "Try again" and third submittal of first question. If continued also displays opening headers upon reaching result.
+1. Cloning
+  * _First, clone this repository to your desktop by opening your terminal and entering the prompt "cd desktop" followed by pressing the enter(return) key. Then type "git clone https://github.com/PRKille/programming-language-selector.git" and press enter(return) again._
+  * _Navigate to the programming-language-selector folder in either your terminal or by double clicking the folder on your desktop._
+  * _Next open the index.html file in any web browser you choose._
+  * _Enjoy discovering the programming language for you!_
+2. Download
+  * _In a web browswer navigate to https://github.com/PRKille/programming-language-selector.git._
+  * _Click the green "Clone or download" button and selct "Download ZIP"_
+  * _Open the file and double click the "index.html" file to open the quiz!_
+3. GitHub Pages
+  * _You may also view the page by [clicking here](PRKille.github.i0/programming-language-selector)._
 
 ## Technologies Used
 
-_Git, HTML, CSS (Bootstrap), JavaScript (jQuery)_
+_Git, HTML, CSS, Bootstrap, JavaScript, jQuery_
 
-### License
-
+### Legal
+This software is produced under the MIT license.
 Copyright (c) 2020 **_Patrick Kille_**

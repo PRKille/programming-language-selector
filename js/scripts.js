@@ -1,5 +1,9 @@
 $(document).ready(function(){
-  // Business Logic
+  var answerOne;
+  var answerTwo;
+  var answerThree;
+  var answerFour;
+  var answerFive;
   function evaluate() {
     if (answerFive === "1" || answerFive === "2") {
       $(".one-two-stars").fadeIn();
@@ -16,7 +20,7 @@ $(document).ready(function(){
       }
     } else if (answerFive === "5") {
       $(".five-stars").slideDown();
-      if (answerOne === "solid" && answerTwo === "new" && answerFour === "play") {
+      if (answerOne === "solid" && answerTwo === "new" && answerThree === "mobile" && answerFour === "play") {
         $(".csharp").slideDown();
       } else if (answerOne === "fun" && answerTwo === "old" && answerFour === "work") {
         $(".ruby").slideDown();
@@ -31,42 +35,41 @@ $(document).ready(function(){
       $("#form-one").show();
     };
   };
-// User Interface Logic
+  
   $("form#form-one").submit(function(){ 
     event.preventDefault(); 
     $("#form-one").hide();
     $("#form-two").show();
     answerOne = $("input:radio[name=question1]:checked").val();
-    $("form#form-two").submit(function(){
-      event.preventDefault();
-      $("#form-two").hide();
-      $("#form-three").show();
-      answerTwo = $("input:radio[name=question2]:checked").val();
-      $("form#form-three").submit(function(){
-        event.preventDefault();
-        $("#form-three").hide();
-        $("#form-four").show();
-        answerThree = $("input:radio[name=question3]:checked").val();
-        $("form#form-four").submit(function(){
-          event.preventDefault();
-          $("#form-four").hide();
-          $("#form-five").show();
-          answerFour = $("input:radio[name=question4]:checked").val();
-          $("form#form-five").submit(function(){
-            event.preventDefault();
-            $("#form-five").hide();
-            $(".opening").hide();
-            answerFive = $("input:radio[name=question5]:checked").val();
-            evaluate();
-            $("button.btn-danger").click(function(){
-              $(".result").fadeOut();
-              $(".opening").delay(600).fadeIn(); 
-              $("#form-one").delay(600).fadeIn();
-              });
-            event.preventDefault();
-          });
-        });
-      });
+  });
+  $("form#form-two").submit(function(){
+    event.preventDefault();
+    $("#form-two").hide();
+    $("#form-three").show();
+    answerTwo = $("input:radio[name=question2]:checked").val();
+  });
+  $("form#form-three").submit(function(){
+    event.preventDefault();
+    $("#form-three").hide();
+    $("#form-four").show();
+    answerThree = $("input:radio[name=question3]:checked").val();
+  });
+  $("form#form-four").submit(function(){
+    event.preventDefault();
+    $("#form-four").hide();
+    $("#form-five").show();
+    answerFour = $("input:radio[name=question4]:checked").val();
+  });
+  $("form#form-five").submit(function(){
+    event.preventDefault();
+    $("#form-five").hide();
+    $(".opening").hide();
+    answerFive = $("input:radio[name=question5]:checked").val();
+    evaluate();
+  });
+  $("button.btn-danger").click(function(){
+    $(".result").fadeOut();
+    $(".opening").delay(600).fadeIn(); 
+    $("#form-one").delay(600).fadeIn();
     });
   });
-});
